@@ -8,11 +8,11 @@ public struct PlayerView: UIViewRepresentable {
         self.player = player
     }
     
-    public func updateUIView(_ uiView: UIView, context: UIViewRepresentableContext<PlayerView>) {
-        (uiView as? PlayerView).setPlayer(player)
+    public func updateUIView(_ uiView: PlayerUIView, context: UIViewRepresentableContext<PlayerView>) {
+        uiView.setPlayer(player)
     }
     
-    public func makeUIView(context: Context) -> UIView {
+    public func makeUIView(context: Context) -> PlayerUIView {
         return PlayerUIView(frame: .zero)
     }
 }
