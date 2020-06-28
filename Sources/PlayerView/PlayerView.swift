@@ -9,7 +9,7 @@ public struct PlayerView: UIViewRepresentable {
     }
     
     public func updateUIView(_ uiView: UIView, context: UIViewRepresentableContext<PlayerView>) {
-        (uiView as? PlayerUIView).setPlayer(player)
+        (uiView as? PlayerUIView)?.setPlayer(player)
     }
     
     public func makeUIView(context: Context) -> UIView {
